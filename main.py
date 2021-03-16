@@ -1,14 +1,14 @@
 from random import shuffle
 import random
 
-randomlist = [] #if u want using str value, u can add here
+randomlist = [] #if u want using str/text value, u can add here
 for i in range(0,100):
-    n = random.randint(25,50) #random using number
+    n = random.randint(25,50) #using random number for replacing
     randomlist.append(str(n))
-target = "2000"
+target = "2000" #text what u want change
 
 #open text
-with open('Fullprofile.txt', 'r') as file :
+with open('Yourfile.txt', 'r') as file :
   filedata = file.read()
   shuffle(randomlist)
   for x in range(len(filedata)):
@@ -18,6 +18,6 @@ with open('Fullprofile.txt', 'r') as file :
   #
 
 # Write the file out again
-with open('Fullprofile_new.txt', 'w') as file:
+with open('Yourfile_new.txt', 'w') as file:
   file.write(filedata)
 
